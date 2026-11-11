@@ -1,0 +1,825 @@
+
+/* =========================================================
+   FLAMENGO — RESPONSIVO
+   Arquivo: CSS/responsivo.css
+   Compatível com: CSS/style.css
+   ========================================================= */
+
+
+/* =========================================================
+   1. NOTEBOOKS E TELAS MENORES
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    :root {
+        --sidebar-width: 235px;
+    }
+
+    .main-content {
+        margin-left: var(--sidebar-width);
+        width: calc(100% - var(--sidebar-width));
+    }
+
+    .dashboard-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .players-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .trophies-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .admin-tools-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .page-section {
+        padding: 25px;
+    }
+
+}
+
+
+/* =========================================================
+   2. TABLETS
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    :root {
+        --sidebar-width: 220px;
+    }
+
+    .sidebar {
+        width: var(--sidebar-width);
+    }
+
+    .main-content {
+        margin-left: var(--sidebar-width);
+        width: calc(100% - var(--sidebar-width));
+    }
+
+    .topbar {
+        padding: 0 20px;
+    }
+
+    .page-section {
+        padding: 22px 18px;
+    }
+
+    .dashboard-hero {
+        padding: 30px;
+    }
+
+    .dashboard-hero h1 {
+        font-size: 30px;
+    }
+
+    .dashboard-hero p {
+        font-size: 14px;
+    }
+
+    .dashboard-cards {
+        gap: 15px;
+    }
+
+    .dashboard-card {
+        padding: 20px;
+    }
+
+    .players-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .trophies-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .season-history-content {
+        overflow-x: auto;
+    }
+
+    .season-history-content table {
+        min-width: 650px;
+    }
+
+}
+
+
+/* =========================================================
+   3. CELULARES — ATÉ 700PX
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    html,
+    body {
+        width: 100%;
+        min-width: 320px;
+        overflow-x: hidden;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    #app,
+    .app,
+    .main-wrapper {
+        width: 100%;
+        min-width: 0;
+        overflow-x: hidden;
+    }
+
+    /* MENU LATERAL */
+
+    .sidebar {
+        width: 270px;
+        max-width: 85vw;
+        height: 100dvh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .sidebar.active,
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .sidebar-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.65);
+        z-index: 999;
+        backdrop-filter: blur(3px);
+    }
+
+    .sidebar-overlay.active {
+        display: block;
+    }
+
+    /* CONTEÚDO PRINCIPAL */
+
+    .main-content {
+        width: 100%;
+        margin-left: 0;
+        min-width: 0;
+    }
+
+    /* BARRA SUPERIOR */
+
+    .topbar {
+        width: 100%;
+        min-height: 65px;
+        height: auto;
+        padding: 12px 15px;
+        gap: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .topbar-left,
+    .topbar-right {
+        gap: 10px;
+        min-width: 0;
+    }
+
+    .topbar h1,
+    .topbar-title {
+        font-size: 16px;
+        line-height: 1.3;
+    }
+
+    .topbar button {
+        flex-shrink: 0;
+    }
+
+    .menu-toggle {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        border-radius: 10px;
+    }
+
+    /* SEÇÕES */
+
+    .page-section {
+        padding: 18px 14px 30px;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .section-header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 22px;
+    }
+
+    .section-header h1,
+    .section-header h2 {
+        font-size: 23px;
+        line-height: 1.25;
+    }
+
+    .section-header p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .section-header .header-actions {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+    }
+
+    /* PAINEL PRINCIPAL */
+
+    .dashboard-hero {
+        padding: 25px 20px;
+        border-radius: 16px;
+        min-height: auto;
+        gap: 15px;
+    }
+
+    .dashboard-hero h1 {
+        font-size: 27px;
+        line-height: 1.2;
+    }
+
+    .dashboard-hero p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .dashboard-hero .hero-content {
+        max-width: 100%;
+    }
+
+    .dashboard-hero .hero-logo,
+    .dashboard-hero img {
+        max-width: 100px;
+        height: auto;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 18px;
+    }
+
+    .dashboard-card {
+        min-width: 0;
+        padding: 16px 13px;
+        border-radius: 13px;
+    }
+
+    .dashboard-card h3 {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .dashboard-card .card-value {
+        font-size: 24px;
+    }
+
+    .dashboard-card .card-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .dashboard-panel {
+        padding: 17px;
+        min-width: 0;
+    }
+
+    /* ELENCO */
+
+    .position-group {
+        margin-bottom: 25px;
+    }
+
+    .position-group-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .position-group-header h3 {
+        font-size: 16px;
+    }
+
+    .players-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .player-card {
+        min-width: 0;
+        padding: 15px;
+    }
+
+    .player-card-header {
+        gap: 12px;
+    }
+
+    .player-card h3 {
+        font-size: 15px;
+        overflow-wrap: anywhere;
+    }
+
+    .player-card p {
+        font-size: 12px;
+    }
+
+    .player-number {
+        font-size: 22px;
+    }
+
+    .player-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+    }
+
+    .player-actions button {
+        flex: 1;
+        min-width: 0;
+    }
+
+    /* ESTATÍSTICAS */
+
+    .statistics-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .stat-card {
+        min-width: 0;
+        padding: 15px 12px;
+    }
+
+    .stat-card h3 {
+        font-size: 12px;
+    }
+
+    .stat-card .stat-value {
+        font-size: 23px;
+    }
+
+    .statistics-table-wrapper,
+    .table-responsive,
+    .season-history-content {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .statistics-table,
+    .statistics-table-wrapper table,
+    .table-responsive table,
+    .season-history-content table {
+        min-width: 570px;
+    }
+
+    /* HISTÓRICO DE TEMPORADAS */
+
+    .season-history-content {
+        padding: 14px;
+    }
+
+    .season-history-card {
+        padding: 16px;
+    }
+
+    .season-history-card h3 {
+        font-size: 17px;
+    }
+
+    .season-history-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .season-history-item {
+        padding: 13px;
+        min-width: 0;
+    }
+
+    .season-history-item input,
+    .season-history-item select {
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* SALA DE TROFÉUS */
+
+    .trophies-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .trophy-card {
+        min-width: 0;
+        padding: 14px 10px;
+    }
+
+    .trophy-card img {
+        max-width: 65px;
+        max-height: 65px;
+        object-fit: contain;
+    }
+
+    .trophy-card h3 {
+        font-size: 13px;
+        overflow-wrap: anywhere;
+    }
+
+    .trophy-card p {
+        font-size: 11px;
+    }
+
+    /* FORMULÁRIOS */
+
+    .form-grid,
+    .form-row,
+    .admin-tools-grid {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .form-group {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .form-group label {
+        font-size: 13px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea,
+    input,
+    select,
+    textarea {
+        max-width: 100%;
+        min-width: 0;
+        font-size: 16px;
+    }
+
+    .form-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+    }
+
+    .form-actions button {
+        width: 100%;
+    }
+
+    /* BOTÕES */
+
+    button,
+    .btn {
+        max-width: 100%;
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    .btn-danger {
+        padding: 11px 15px;
+        font-size: 13px;
+    }
+
+    /* MODAIS */
+
+    .modal-overlay {
+        padding: 12px;
+        align-items: center;
+        overflow-y: auto;
+    }
+
+    .modal,
+    .modal-content {
+        width: 100%;
+        max-width: 100%;
+        max-height: 90dvh;
+        overflow-y: auto;
+        padding: 20px 16px;
+        border-radius: 15px;
+    }
+
+    .modal-header {
+        gap: 10px;
+    }
+
+    .modal-header h2 {
+        font-size: 19px;
+    }
+
+    .modal-body {
+        min-width: 0;
+    }
+
+    .modal-footer {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+    }
+
+    .modal-footer button {
+        width: 100%;
+    }
+
+    /* ÁREA ADMINISTRATIVA */
+
+    .admin-tools-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-tool-card {
+        padding: 17px;
+    }
+
+    /* LOGIN / ACESSO */
+
+    .login-container {
+        width: calc(100% - 28px);
+        max-width: 420px;
+        padding: 24px 18px;
+    }
+
+    .login-container h1 {
+        font-size: 22px;
+    }
+
+    /* ÚLTIMAS CONTRATAÇÕES */
+
+    .recent-transfers,
+    .transfer-list {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .transfer-item {
+        gap: 10px;
+        padding: 12px;
+        min-width: 0;
+    }
+
+    .transfer-item h4 {
+        font-size: 13px;
+        overflow-wrap: anywhere;
+    }
+
+    /* NOTIFICAÇÕES */
+
+    .notification,
+    .toast,
+    .alert {
+        width: calc(100% - 28px);
+        max-width: 420px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
+
+    /* RODAPÉ */
+
+    .footer {
+        padding: 20px 14px;
+        text-align: center;
+    }
+
+    .footer p {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+
+}
+
+
+/* =========================================================
+   4. CELULARES PEQUENOS — ATÉ 400PX
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .page-section {
+        padding: 15px 11px 25px;
+    }
+
+    .topbar {
+        padding: 10px 11px;
+    }
+
+    .topbar h1,
+    .topbar-title {
+        font-size: 14px;
+    }
+
+    .dashboard-hero {
+        padding: 21px 16px;
+    }
+
+    .dashboard-hero h1 {
+        font-size: 23px;
+    }
+
+    .dashboard-cards {
+        gap: 9px;
+    }
+
+    .dashboard-card {
+        padding: 13px 10px;
+    }
+
+    .dashboard-card .card-value {
+        font-size: 21px;
+    }
+
+    .dashboard-card h3 {
+        font-size: 11px;
+    }
+
+    .statistics-grid {
+        gap: 8px;
+    }
+
+    .stat-card {
+        padding: 12px 9px;
+    }
+
+    .stat-card .stat-value {
+        font-size: 20px;
+    }
+
+    .trophies-grid {
+        gap: 9px;
+    }
+
+    .trophy-card {
+        padding: 12px 8px;
+    }
+
+    .section-header h1,
+    .section-header h2 {
+        font-size: 21px;
+    }
+
+}
+
+
+/* =========================================================
+   5. TELAS MUITO PEQUENAS — ATÉ 350PX
+   ========================================================= */
+
+@media (max-width: 350px) {
+
+    .dashboard-cards,
+    .statistics-grid,
+    .trophies-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .topbar {
+        gap: 6px;
+    }
+
+    .topbar h1,
+    .topbar-title {
+        font-size: 13px;
+    }
+
+    .menu-toggle {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+    }
+
+}
+
+
+/* =========================================================
+   6. AJUSTES GERAIS DE RESPONSIVIDADE
+   ========================================================= */
+
+img,
+video,
+iframe {
+    max-width: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+    font-family: inherit;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@media (max-width: 700px) {
+
+    .sidebar,
+    .main-content,
+    .page-section,
+    .dashboard-panel,
+    .dashboard-card,
+    .player-card,
+    .trophy-card,
+    .modal,
+    .modal-content {
+        box-sizing: border-box;
+    }
+
+    /* Evita que textos grandes estourem os cartões */
+
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    span,
+    label {
+        overflow-wrap: break-word;
+    }
+
+    /* Mantém imagens proporcionais */
+
+    .club-logo,
+    .team-logo,
+    .flamengo-logo {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* Rolagem suave nas tabelas */
+
+    .table-responsive,
+    .statistics-table-wrapper,
+    .season-history-content {
+        scrollbar-width: thin;
+        scrollbar-color: #c8102e #1a1a1a;
+    }
+
+    .table-responsive::-webkit-scrollbar,
+    .statistics-table-wrapper::-webkit-scrollbar,
+    .season-history-content::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .table-responsive::-webkit-scrollbar-thumb,
+    .statistics-table-wrapper::-webkit-scrollbar-thumb,
+    .season-history-content::-webkit-scrollbar-thumb {
+        background: #c8102e;
+        border-radius: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   FIM DO RESPONSIVO — CLUBE DE REGATAS DO FLAMENGO
+   ========================================================= */

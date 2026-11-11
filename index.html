@@ -1,0 +1,2199 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <meta name="theme-color" content="#101010">
+    <meta name="description" content="Portal oficial do Clube de Regatas do Flamengo no TPS Futebol de Rua.">
+
+    <title>Flamengo | Site Oficial</title>
+
+    <link rel="icon" type="image/png" href="Assents/Favicon.png">
+
+    <!-- FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- ÍCONES -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/responsivo.css">
+    <link rel="stylesheet" href="CSS/animacoes.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         CARREGAMENTO
+    ========================== -->
+
+    <div id="loading-screen" class="loading-screen">
+        <img src="Assents/Flamengo.png" alt="Flamengo">
+        <div class="loading-spinner"></div>
+        <p>CARREGANDO...</p>
+    </div>
+
+
+    <!-- =========================
+         ESTRUTURA PRINCIPAL
+    ========================== -->
+
+    <div class="app-container" id="app-container">
+
+        <!-- MENU LATERAL -->
+
+        <aside class="sidebar" id="sidebar">
+
+            <div class="sidebar-header">
+
+                <img src="Assents/Flamengo.png" alt="Escudo Flamengo" class="sidebar-logo">
+
+                <div class="sidebar-brand">
+                    <h2>FLAMENGO</h2>
+                    <span>CLUBE DE REGATAS</span>
+                </div>
+
+                <button class="close-sidebar" id="close-sidebar" aria-label="Fechar menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+
+            <div class="sidebar-season">
+
+                <span class="season-label">TEMPORADA ATUAL</span>
+
+                <div class="season-display">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <strong id="sidebar-season">S1</strong>
+                </div>
+
+            </div>
+
+
+            <nav class="sidebar-navigation">
+
+                <span class="nav-section-title">CLUBE</span>
+
+                <button class="nav-item active" data-page="dashboard">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Painel Geral</span>
+                </button>
+
+                <button class="nav-item" data-page="elenco">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Nosso Elenco</span>
+                </button>
+
+                <button class="nav-item" data-page="estatisticas">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Estatísticas</span>
+                </button>
+
+
+                <span class="nav-section-title">HISTÓRIA DO CLUBE</span>
+
+                <button class="nav-item" data-page="temporadas">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <span>Temporadas</span>
+                </button>
+
+                <button class="nav-item" data-page="trofeus">
+                    <i class="fa-solid fa-trophy"></i>
+                    <span>Sala de Troféus</span>
+                </button>
+
+
+                <span class="nav-section-title">ADMINISTRAÇÃO</span>
+
+                <button class="nav-item" data-page="administracao">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Administração</span>
+                </button>
+
+            </nav>
+
+
+            <div class="sidebar-footer">
+
+                <div class="sidebar-club-info">
+                    <div class="club-status-indicator"></div>
+
+                    <div>
+                        <strong>FLAMENGO</strong>
+                        <span>TPS FUTEBOL DE RUA</span>
+                    </div>
+                </div>
+
+                <p>© FLAMENGO - TODOS OS DIREITOS RESERVADOS</p>
+
+            </div>
+
+        </aside>
+
+
+        <!-- FUNDO DO MENU MOBILE -->
+
+        <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+
+        <!-- =========================
+             CONTEÚDO PRINCIPAL
+        ========================== -->
+
+        <main class="main-content">
+
+
+            <!-- CABEÇALHO -->
+
+            <header class="topbar">
+
+                <div class="topbar-left">
+
+                    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+
+                    <div class="breadcrumb">
+                        <span>FLAMENGO</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                        <strong id="current-page-name">Painel Geral</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="topbar-right">
+
+                    <div class="topbar-season">
+                        <i class="fa-solid fa-calendar"></i>
+                        <span id="topbar-season">TEMPORADA S1</span>
+                    </div>
+
+                    <div class="topbar-crest">
+                        <img src="Assents/Flamengo.png" alt="Flamengo">
+                    </div>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- =========================
+                 PÁGINA: PAINEL GERAL
+            ========================== -->
+
+            <section class="page-section active" id="page-dashboard">
+
+
+                <!-- DESTAQUE -->
+
+                <div class="dashboard-hero">
+
+                    <div class="hero-background"></div>
+
+                    <div class="hero-content">
+
+                        <div class="hero-tag">
+                            <span></span>
+                            CLUBE DE REGATAS DO FLAMENGO
+                        </div>
+
+                        <h1>UMA HISTÓRIA.<br><span>UMA NAÇÃO.</span></h1>
+
+                        <p>
+                            Tradição, raça e paixão.
+                            O orgulho de vestir vermelho e preto.
+                        </p>
+
+                        <div class="hero-season">
+                            <span>TEMPORADA ATUAL</span>
+                            <strong id="hero-season">S1</strong>
+                        </div>
+
+                    </div>
+
+                    <div class="hero-crest">
+                        <img src="Assents/Flamengo.png" alt="Escudo do Flamengo">
+                    </div>
+
+                </div>
+
+
+
+                <!-- INDICADORES -->
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="section-eyebrow">VISÃO GERAL</span>
+                        <h2>Painel do Clube</h2>
+                        <p>Acompanhe os principais números do Flamengo.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-cards">
+
+                    <!-- JOGADORES -->
+
+                    <article class="stat-card">
+
+                        <div class="stat-card-top">
+                            <div class="stat-icon red">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+
+                            <span class="stat-label">ELENCO</span>
+                        </div>
+
+                        <div class="stat-card-value" id="dashboard-player-count">
+                            0
+                        </div>
+
+                        <span class="stat-card-description">
+                            Jogadores no clube
+                        </span>
+
+                    </article>
+
+
+                        <!-- CAIXA -->
+            <article class="stat-card admin-clickable" id="card-edit-cash" title="Clique para editar o caixa" style="cursor: pointer;">
+
+             <div class="stat-card-top">
+                 <div class="stat-icon gold">
+                   <i class="fa-solid fa-wallet"></i>
+                     </div>
+
+              <span class="stat-label">FINANCEIRO <i class="fa-solid fa-pen admin-only" style="font-size: 9px; margin-left: 5px;"></i></span>
+         </div>
+
+              <div class="stat-card-value" id="dashboard-cash">
+        € 0,00
+              </div>
+
+                 <span class="stat-card-description">
+        Caixa disponível (Clique para editar)
+          </span>
+
+                    </article>
+
+
+                    <!-- JOGOS -->
+
+                    <article class="stat-card">
+
+                        <div class="stat-card-top">
+                            <div class="stat-icon dark">
+                                <i class="fa-solid fa-futbol"></i>
+                            </div>
+
+                            <span class="stat-label">TEMPORADA</span>
+                        </div>
+
+                        <div class="stat-card-value" id="dashboard-games">
+                            0
+                        </div>
+
+                        <span class="stat-card-description">
+                            Jogos disputados
+                        </span>
+
+                    </article>
+
+
+                    <!-- TROFÉUS -->
+
+                    <article class="stat-card">
+
+                        <div class="stat-card-top">
+                            <div class="stat-icon gold">
+                                <i class="fa-solid fa-trophy"></i>
+                            </div>
+
+                            <span class="stat-label">CONQUISTAS</span>
+                        </div>
+
+                        <div class="stat-card-value" id="dashboard-trophies">
+                            0
+                        </div>
+
+                        <span class="stat-card-description">
+                            Títulos conquistados
+                        </span>
+
+                    </article>
+
+                </div>
+
+
+
+                <!-- INFORMAÇÕES DO CLUBE -->
+
+                <div class="dashboard-grid">
+
+
+                    <div class="content-card club-information">
+
+                        <div class="card-heading">
+                            <div>
+                                <span class="section-eyebrow">IDENTIDADE</span>
+                                <h3>Informações do Clube</h3>
+                            </div>
+
+                            <i class="fa-solid fa-shield-halved heading-icon"></i>
+                        </div>
+
+
+                        <div class="club-profile">
+
+                            <img src="Assents/Flamengo.png" alt="Escudo Flamengo">
+
+                            <div>
+                                <h2>FLAMENGO</h2>
+                                <span>Clube de Regatas do Flamengo</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="information-list">
+
+                            <div class="information-row">
+                                <span>Presidenta</span>
+                                <strong id="club-president">Koee_annaa</strong>
+                            </div>
+
+                            <div class="information-row">
+                                <span>Temporada</span>
+                                <strong id="club-season">S1</strong>
+                            </div>
+
+                            <div class="information-row">
+                                <span>Modalidade</span>
+                                <strong>TPS Futebol de Rua</strong>
+                            </div>
+
+                            <div class="information-row">
+                                <span>País</span>
+                                <strong>🇧🇷 Brasil</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ÚLTIMAS CONTRATAÇÕES -->
+
+                    <div class="content-card">
+
+                        <div class="card-heading">
+
+                            <div>
+                                <span class="section-eyebrow">MERCADO DA BOLA</span>
+                                <h3>Últimas Contratações</h3>
+                            </div>
+
+                            <i class="fa-solid fa-arrow-right-arrow-left heading-icon"></i>
+
+                        </div>
+
+
+                        <div class="recent-transfers" id="recent-transfers">
+
+                            <div class="empty-state">
+
+                                <div class="empty-state-icon">
+                                    <i class="fa-solid fa-shirt"></i>
+                                </div>
+
+                                <strong>Nenhuma contratação ainda</strong>
+
+                                <span>
+                                    As novas contratações aparecerão aqui.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <button class="text-action" data-page="elenco">
+                            VER ELENCO
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TEMPORADA -->
+
+                <div class="content-card season-overview">
+
+                    <div class="card-heading">
+
+                        <div>
+                            <span class="section-eyebrow">NOSSA CAMINHADA</span>
+                            <h3>Temporada em andamento</h3>
+                        </div>
+
+                        <span class="season-badge" id="dashboard-season-badge">
+                            S1
+                        </span>
+
+                    </div>
+
+
+                    <div class="season-overview-content">
+
+                        <div class="season-number">
+                            <span>TEMPORADA</span>
+                            <strong id="dashboard-season-number">01</strong>
+                        </div>
+
+
+                        <div class="season-details">
+
+                            <p>
+                                Acompanhe a trajetória do Flamengo
+                                nesta temporada.
+                            </p>
+
+                            <div class="season-progress-info">
+                                <span>Estatísticas atualizadas</span>
+                                <i class="fa-solid fa-chart-simple"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- FRASE -->
+
+                <div class="flamengo-quote">
+
+                    <i class="fa-solid fa-quote-left"></i>
+
+                    <h2>Uma vez Flamengo, sempre Flamengo!</h2>
+
+                    <span>ORGULHO DE SER RUBRO-NEGRO.</span>
+
+                </div>
+
+
+            </section>
+
+
+
+
+            <!-- =========================
+                 PÁGINA: ELENCO
+            ========================== -->
+
+            <section class="page-section" id="page-elenco">
+
+
+                <div class="page-header">
+
+                    <div>
+                        <span class="section-eyebrow">NOSSA EQUIPE</span>
+                        <h1>Nosso Elenco</h1>
+                        <p>Conheça os jogadores que representam o manto rubro-negro.</p>
+                    </div>
+
+                    <button class="primary-button admin-only" id="add-player-button">
+                        <i class="fa-solid fa-plus"></i>
+                        Adicionar Jogador
+                    </button>
+
+                </div>
+
+
+
+                <div class="squad-summary">
+
+                    <div>
+                        <i class="fa-solid fa-users"></i>
+
+                        <div>
+                            <strong id="squad-total">0</strong>
+                            <span>Jogadores</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-futbol"></i>
+
+                        <div>
+                            <strong id="squad-games">0</strong>
+                            <span>Jogos na temporada</span>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <!-- FILTRO -->
+
+                <div class="squad-toolbar">
+
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="search" id="player-search" placeholder="Buscar jogador...">
+                    </div>
+
+
+                    <select id="player-filter">
+                        <option value="todos">Todas as posições</option>
+                        <option value="Goleiro">Goleiros</option>
+                        <option value="Zagueiro">Zagueiros</option>
+                        <option value="Meia">Meias</option>
+                        <option value="Atacante">Atacantes</option>
+                        <option value="Ala">Alas</option>
+                    </select>
+
+                </div>
+
+
+
+                <!-- GOLEIROS -->
+
+                <div class="position-group" data-position="Goleiro">
+
+                    <div class="position-heading">
+
+                        <div class="position-icon">
+                            🧤
+                        </div>
+
+                        <div>
+                            <h2>Goleiros</h2>
+                            <span>GUARDIÕES DA META</span>
+                        </div>
+
+                        <strong id="count-goleiro">0</strong>
+
+                    </div>
+
+
+                    <div class="players-grid" id="players-goleiro">
+
+                        <div class="empty-position">
+                            Nenhum goleiro cadastrado.
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ZAGUEIROS -->
+
+                <div class="position-group" data-position="Zagueiro">
+
+                    <div class="position-heading">
+
+                        <div class="position-icon">
+                            🛡️
+                        </div>
+
+                        <div>
+                            <h2>Zagueiros</h2>
+                            <span>SEGURANÇA DEFENSIVA</span>
+                        </div>
+
+                        <strong id="count-zagueiro">0</strong>
+
+                    </div>
+
+
+                    <div class="players-grid" id="players-zagueiro">
+
+                        <div class="empty-position">
+                            Nenhum zagueiro cadastrado.
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- MEIAS -->
+
+                <div class="position-group" data-position="Meia">
+
+                    <div class="position-heading">
+
+                        <div class="position-icon">
+                            🎯
+                        </div>
+
+                        <div>
+                            <h2>Meias</h2>
+                            <span>INTELIGÊNCIA E CRIAÇÃO</span>
+                        </div>
+
+                        <strong id="count-meia">0</strong>
+
+                    </div>
+
+
+                    <div class="players-grid" id="players-meia">
+
+                        <div class="empty-position">
+                            Nenhum meia cadastrado.
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ATACANTES -->
+
+                <div class="position-group" data-position="Atacante">
+
+                    <div class="position-heading">
+
+                        <div class="position-icon">
+                            ⚽
+                        </div>
+
+                        <div>
+                            <h2>Atacantes</h2>
+                            <span>ARTILHEIROS DO MENGÃO</span>
+                        </div>
+
+                        <strong id="count-atacante">0</strong>
+
+                    </div>
+
+
+                    <div class="players-grid" id="players-atacante">
+
+                        <div class="empty-position">
+                            Nenhum atacante cadastrado.
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ALAS -->
+
+                <div class="position-group" data-position="Ala">
+
+                    <div class="position-heading">
+
+                        <div class="position-icon">
+                            🏃
+                        </div>
+
+                        <div>
+                            <h2>Alas</h2>
+                            <span>VELOCIDADE E MOVIMENTAÇÃO</span>
+                        </div>
+
+                        <strong id="count-ala">0</strong>
+
+                    </div>
+
+
+                    <div class="players-grid" id="players-ala">
+
+                        <div class="empty-position">
+                            Nenhum ala cadastrado.
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+
+
+            <!-- =========================
+                 PÁGINA: ESTATÍSTICAS
+            ========================== -->
+
+            <section class="page-section" id="page-estatisticas">
+
+
+                <div class="page-header">
+
+                    <div>
+                        <span class="section-eyebrow">DESEMPENHO</span>
+                        <h1>Estatísticas</h1>
+                        <p>Os números do Flamengo dentro de campo.</p>
+                    </div>
+
+                    <div class="current-season-tag" id="stats-season">
+                        TEMPORADA S1
+                    </div>
+
+                </div>
+
+
+
+                <!-- NÚMEROS GERAIS -->
+
+                <div class="dashboard-cards">
+
+                    <article class="stat-card">
+
+                        <div class="stat-card-top">
+                            <div class="stat-icon dark">
+                                <i class="fa-solid fa-futbol"></i>
+                            </div>
+                            <span class="stat-label">PARTIDAS</span>
+                        </div>
+
+                        <div class="stat-card-value" id="stats-games">
+                            0
+                        </div>
+
+                        <span class="stat-card-description">Jogos disputados</span>
+
+                    </article>
+
+
+                    <article class="stat-card">
+
+                        <div class="stat-card-top">
+                            <div class="stat-icon red">
+                                <i class="fa-solid fa-bullseye"></i>
+                            </div>
+                            <span class="stat-label">GOLS</span>
+                        </div>
+
+                        <div class="stat-card-value" id="stats-goals">
+                            0
+                        </div>
+
+                        <span class="stat-card-description">Gols marcados</span>
+
+                    </article>
+
+
+                    <article class="stat-card">
+
+                        <div class="stat-card-top">
+                            <div class="stat-icon gold">
+                                <i class="fa-solid fa-hands-clapping"></i>
+                            </div>
+                            <span class="stat-label">ASSISTÊNCIAS</span>
+                        </div>
+
+                        <div class="stat-card-value" id="stats-assists">
+                            0
+                        </div>
+
+                        <span class="stat-card-description">Assistências realizadas</span>
+
+                    </article>
+
+
+                </div>
+
+
+
+                <!-- ARTILHEIRO E GARÇOM -->
+
+                <div class="dashboard-grid">
+
+                    <div class="content-card">
+
+                        <div class="card-heading">
+                            <div>
+                                <span class="section-eyebrow">GOLEADORES</span>
+                                <h3>Artilheiro da Temporada</h3>
+                            </div>
+
+                            <i class="fa-solid fa-fire heading-icon"></i>
+                        </div>
+
+                        <div id="top-scorer" class="ranking-highlight">
+                            <div class="empty-state">
+                                <strong>Nenhum gol registrado.</strong>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="content-card">
+
+                        <div class="card-heading">
+                            <div>
+                                <span class="section-eyebrow">GARÇONS</span>
+                                <h3>Líder de Assistências</h3>
+                            </div>
+
+                            <i class="fa-solid fa-handshake heading-icon"></i>
+                        </div>
+
+                        <div id="top-assister" class="ranking-highlight">
+                            <div class="empty-state">
+                                <strong>Nenhuma assistência registrada.</strong>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TABELA DE ESTATÍSTICAS -->
+
+                <div class="content-card">
+
+                    <div class="card-heading">
+
+                        <div>
+                            <span class="section-eyebrow">DESEMPENHO INDIVIDUAL</span>
+                            <h3>Estatísticas dos Jogadores</h3>
+                        </div>
+
+                    </div>
+
+
+                    <div class="table-container">
+
+                        <table class="data-table">
+
+                            <thead>
+                                <tr>
+                                    <th>JOGADOR</th>
+                                    <th>POSIÇÃO</th>
+                                    <th>JOGOS</th>
+                                    <th>GOLS</th>
+                                    <th>ASSISTÊNCIAS</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="statistics-table-body">
+
+                                <tr>
+                                    <td colspan="5" class="table-empty">
+                                        Nenhum jogador cadastrado.
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+
+
+            <!-- =========================
+                 PÁGINA: TEMPORADAS
+            ========================== -->
+
+            <section class="page-section" id="page-temporadas">
+
+
+                <div class="page-header">
+
+                    <div>
+                        <span class="section-eyebrow">NOSSA HISTÓRIA</span>
+                        <h1>Histórico de Temporadas</h1>
+                        <p>Todos os capítulos da trajetória rubro-negra.</p>
+                    </div>
+
+                    <button class="primary-button admin-only" id="advance-season-button">
+                        <i class="fa-solid fa-forward"></i>
+                        Avançar Temporada
+                    </button>
+
+                </div>
+
+
+
+                <!-- TEMPORADA ATUAL -->
+
+                <div class="content-card current-season-card">
+
+                    <div class="season-card-top">
+
+                        <div>
+                            <span class="section-eyebrow">EM ANDAMENTO</span>
+                            <h2>Temporada <span id="history-current-season">S1</span></h2>
+                        </div>
+
+                        <span class="season-status">
+                            <span></span>
+                            ATUAL
+                        </span>
+
+                    </div>
+
+                    <p>
+                        A temporada atual ainda está em andamento.
+                        Registre os acontecimentos para construir nossa história.
+                    </p>
+
+                    <button class="secondary-button admin-only" id="edit-current-season">
+                        <i class="fa-solid fa-pen"></i>
+                        Editar Informações da Temporada
+                    </button>
+
+                </div>
+
+
+
+                <!-- TEMPORADAS ANTERIORES -->
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="section-eyebrow">MEMÓRIA RUBRO-NEGRA</span>
+                        <h2>Temporadas Encerradas</h2>
+                        <p>Consulte os registros de cada temporada.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="seasons-list" id="seasons-list">
+
+                    <div class="empty-state">
+
+                        <div class="empty-state-icon">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </div>
+
+                        <strong>Nenhuma temporada encerrada.</strong>
+
+                        <span>
+                            Quando uma temporada for encerrada,
+                            seu histórico aparecerá aqui.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+
+
+            <!-- =========================
+                 PÁGINA: SALA DE TROFÉUS
+            ========================== -->
+
+            <section class="page-section" id="page-trofeus">
+
+
+                <div class="page-header">
+
+                    <div>
+                        <span class="section-eyebrow">GLÓRIAS E CONQUISTAS</span>
+                        <h1>Sala de Troféus</h1>
+                        <p>Uma história construída com títulos e conquistas.</p>
+                    </div>
+
+                    <button class="primary-button admin-only" id="add-trophy-button">
+                        <i class="fa-solid fa-plus"></i>
+                        Adicionar Troféu
+                    </button>
+
+                </div>
+
+
+
+                <!-- RESUMO DE TÍTULOS -->
+
+                <div class="trophy-summary">
+
+                    <div class="trophy-summary-icon">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+
+                    <div>
+                        <span>TOTAL DE CONQUISTAS</span>
+                        <strong id="total-trophies">0</strong>
+                    </div>
+
+                </div>
+
+
+
+                <!-- FILTRO DE TROFÉUS -->
+
+                <div class="trophy-toolbar">
+
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="search" id="trophy-search" placeholder="Buscar competição...">
+                    </div>
+
+                </div>
+
+
+
+                <!-- TROFÉUS -->
+
+                <div class="trophies-grid" id="trophies-grid">
+
+                    <div class="empty-state">
+
+                        <div class="empty-state-icon">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+
+                        <strong>Nenhum título cadastrado.</strong>
+
+                        <span>
+                            As conquistas do Flamengo aparecerão aqui.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+
+
+            <!-- =========================
+                 PÁGINA: ADMINISTRAÇÃO
+            ========================== -->
+
+            <section class="page-section" id="page-administracao">
+
+
+                <div class="page-header">
+
+                    <div>
+                        <span class="section-eyebrow">CENTRAL DO CLUBE</span>
+                        <h1>Administração</h1>
+                        <p>Gerencie as informações do Flamengo.</p>
+                    </div>
+
+                    <div class="admin-status" id="admin-status">
+                        <span></span>
+                        MODO VISUALIZAÇÃO
+                    </div>
+
+                </div>
+
+
+
+                <!-- ACESSO ADMINISTRATIVO -->
+
+                <div class="content-card admin-login-card" id="admin-login-card">
+
+                    <div class="admin-login-icon">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+
+                    <div class="admin-login-heading">
+                        <h2>Acesso Administrativo</h2>
+                        <p>
+                            Identifique-se para acessar as ferramentas
+                            de gerenciamento do clube.
+                        </p>
+                    </div>
+
+
+                    <form id="admin-login-form">
+
+                        <div class="form-group">
+
+                            <label for="admin-name">Nome de administrador</label>
+
+                            <div class="input-with-icon">
+                                <i class="fa-solid fa-user"></i>
+                                <input
+                                    type="text"
+                                    id="admin-name"
+                                    placeholder="Digite seu nome"
+                                    autocomplete="username"
+                                    required
+                                >
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="admin-password">Senha administrativa</label>
+
+                            <div class="input-with-icon">
+                                <i class="fa-solid fa-key"></i>
+                                <input
+                                    type="password"
+                                    id="admin-password"
+                                    placeholder="Digite sua senha"
+                                    autocomplete="current-password"
+                                    required
+                                >
+                            </div>
+
+                        </div>
+
+
+                        <button type="submit" class="primary-button full-width">
+                            <i class="fa-solid fa-unlock"></i>
+                            Acessar Administração
+                        </button>
+
+                        <p class="login-feedback" id="admin-login-feedback"></p>
+
+                    </form>
+
+                </div>
+
+
+
+                <!-- PAINEL ADMINISTRATIVO -->
+
+                <div class="admin-panel hidden" id="admin-panel">
+
+
+                    <div class="admin-welcome">
+
+                        <div class="admin-welcome-icon">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+
+                        <div>
+                            <span>SESSÃO ADMINISTRATIVA</span>
+                            <h2>Bem-vindo, Lemos!</h2>
+                            <p>Você tem permissão para gerenciar o clube.</p>
+                        </div>
+
+                        <button class="secondary-button" id="admin-logout">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            Sair
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- CONFIGURAÇÕES -->
+
+                    <div class="section-heading">
+
+                        <div>
+                            <span class="section-eyebrow">GERENCIAMENTO</span>
+                            <h2>Ferramentas Administrativas</h2>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="admin-tools-grid">
+
+
+                        <!-- CAIXA -->
+
+                        <div class="admin-tool-card">
+
+                            <div class="admin-tool-icon gold">
+                                <i class="fa-solid fa-wallet"></i>
+                            </div>
+
+                            <h3>Financeiro</h3>
+
+                            <p>Atualize o saldo disponível do clube.</p>
+
+                            <button class="secondary-button" id="edit-cash-button">
+                                <i class="fa-solid fa-pen"></i>
+                                Editar Caixa
+                            </button>
+
+                        </div>
+
+
+
+                        <!-- JOGADORES -->
+
+                        <div class="admin-tool-card">
+
+                            <div class="admin-tool-icon red">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+
+                            <h3>Elenco</h3>
+
+                            <p>Cadastre novos atletas no Flamengo.</p>
+
+                            <button class="secondary-button" id="admin-add-player">
+                                <i class="fa-solid fa-plus"></i>
+                                Adicionar Jogador
+                            </button>
+
+                        </div>
+
+
+
+                        <!-- TROFÉUS -->
+
+                        <div class="admin-tool-card">
+
+                            <div class="admin-tool-icon gold">
+                                <i class="fa-solid fa-trophy"></i>
+                            </div>
+
+                            <h3>Conquistas</h3>
+
+                            <p>Adicione e atualize os títulos do clube.</p>
+
+                            <button class="secondary-button" id="admin-add-trophy">
+                                <i class="fa-solid fa-plus"></i>
+                                Adicionar Troféu
+                            </button>
+
+                        </div>
+
+
+
+                        <!-- TEMPORADA -->
+
+                        <div class="admin-tool-card">
+
+                            <div class="admin-tool-icon dark">
+                                <i class="fa-solid fa-calendar-days"></i>
+                            </div>
+
+                            <h3>Temporadas</h3>
+
+                            <p>Registre os resultados e avance a temporada.</p>
+
+                            <button class="secondary-button" id="admin-edit-season">
+                                <i class="fa-solid fa-pen"></i>
+                                Editar Temporada
+                            </button>
+
+                        </div>
+
+
+
+                        <!-- CONTRATAÇÕES -->
+
+                        <div class="admin-tool-card">
+
+                            <div class="admin-tool-icon red">
+                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                            </div>
+
+                            <h3>Contratações</h3>
+
+                            <p>Gerencie as movimentações do elenco.</p>
+
+                            <button class="secondary-button" id="add-transfer-button">
+                                <i class="fa-solid fa-plus"></i>
+                                Registrar Contratação
+                            </button>
+
+                        </div>
+
+
+
+                        <!-- PRESIDENTA -->
+
+                        <div class="admin-tool-card">
+
+                            <div class="admin-tool-icon dark">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+
+                            <h3>Informações do Clube</h3>
+
+                            <p>Atualize os dados institucionais.</p>
+
+                            <button class="secondary-button" id="edit-club-button">
+                                <i class="fa-solid fa-pen"></i>
+                                Editar Informações
+                            </button>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- SEGURANÇA -->
+
+                    <div class="content-card admin-security-card">
+
+                        <div class="card-heading">
+
+                            <div>
+                                <span class="section-eyebrow">SEGURANÇA</span>
+                                <h3>Controle Administrativo</h3>
+                            </div>
+
+                            <i class="fa-solid fa-shield-halved heading-icon"></i>
+
+                        </div>
+
+                        <p>
+                            As alterações administrativas deverão ser
+                            autorizadas pelo sistema de permissões.
+                        </p>
+
+                        <div class="security-status">
+                            <i class="fa-solid fa-lock"></i>
+                            Banco de dados protegido por permissões.
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+
+
+            <!-- =========================
+                 RODAPÉ
+            ========================== -->
+
+            <footer class="main-footer">
+
+                <div class="footer-crest">
+                    <img src="Assents/Flamengo.png" alt="Flamengo">
+                </div>
+
+                <div class="footer-text">
+
+                    <strong>CLUBE DE REGATAS DO FLAMENGO</strong>
+
+                    <span>UMA VEZ FLAMENGO, SEMPRE FLAMENGO!</span>
+
+                    <p>
+                        Portal de gerenciamento do Flamengo
+                        no TPS Futebol de Rua.
+                    </p>
+
+                </div>
+
+                <div class="footer-copyright">
+                    © 2026 FLAMENGO
+                </div>
+
+            </footer>
+
+
+        </main>
+
+    </div>
+
+
+
+
+    <!-- =========================
+         MODAL: JOGADOR
+    ========================== -->
+
+    <div class="modal-overlay" id="player-modal">
+
+        <div class="modal-box">
+
+            <div class="modal-header">
+
+                <div>
+                    <span class="section-eyebrow">GERENCIAMENTO DO ELENCO</span>
+                    <h2 id="player-modal-title">Adicionar Jogador</h2>
+                </div>
+
+                <button class="modal-close" data-close-modal="player-modal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+
+            <form id="player-form">
+
+                <input type="hidden" id="player-id">
+
+
+                <div class="form-group">
+
+                    <label for="player-name">Nome do jogador</label>
+
+                    <input
+                        type="text"
+                        id="player-name"
+                        placeholder="Ex: Lemos"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="player-position">Posição</label>
+
+                        <select id="player-position" required>
+
+                            <option value="">Selecione</option>
+
+                            <option value="Goleiro">Goleiro</option>
+
+                            <option value="Zagueiro">Zagueiro</option>
+
+                            <option value="Meia">Meia</option>
+
+                            <option value="Atacante">Atacante</option>
+
+                            <option value="Ala">Ala</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="player-number">Numeração</label>
+
+                        <input
+                            type="number"
+                            id="player-number"
+                            min="0"
+                            max="99"
+                            placeholder="Ex: 10"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-divider">
+                    ESTATÍSTICAS DA TEMPORADA
+                </div>
+
+
+                <div class="form-row three-columns">
+
+                    <div class="form-group">
+
+                        <label for="player-games">Jogos</label>
+
+                        <input type="number" id="player-games" min="0" value="0">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="player-goals">Gols</label>
+
+                        <input type="number" id="player-goals" min="0" value="0">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="player-assists">Assistências</label>
+
+                        <input type="number" id="player-assists" min="0" value="0">
+
+                    </div>
+
+                </div>
+
+
+                <div class="modal-actions">
+
+                    <button type="button" class="secondary-button" data-close-modal="player-modal">
+                        Cancelar
+                    </button>
+
+                    <button type="submit" class="primary-button">
+                        <i class="fa-solid fa-floppy-disk"></i>
+                        Salvar Jogador
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- =========================
+         MODAL: CAIXA
+    ========================== -->
+
+    <div class="modal-overlay" id="cash-modal">
+
+        <div class="modal-box">
+
+            <div class="modal-header">
+
+                <div>
+                    <span class="section-eyebrow">FINANCEIRO</span>
+                    <h2>Atualizar Caixa</h2>
+                </div>
+
+                <button class="modal-close" data-close-modal="cash-modal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+
+            <form id="cash-form">
+
+                <div class="form-group">
+
+                    <label for="cash-value">Valor disponível (€)</label>
+
+                    <input
+                        type="number"
+                        id="cash-value"
+                        min="0"
+                        step="0.01"
+                        placeholder="Ex: 1500000"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="modal-actions">
+
+                    <button type="button" class="secondary-button" data-close-modal="cash-modal">
+                        Cancelar
+                    </button>
+
+                    <button type="submit" class="primary-button">
+                        Salvar Caixa
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- =========================
+         MODAL: TROFÉU
+    ========================== -->
+
+    <div class="modal-overlay" id="trophy-modal">
+
+        <div class="modal-box">
+
+            <div class="modal-header">
+
+                <div>
+                    <span class="section-eyebrow">SALA DE TROFÉUS</span>
+                    <h2 id="trophy-modal-title">Adicionar Competição</h2>
+                </div>
+
+                <button class="modal-close" data-close-modal="trophy-modal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+
+            <form id="trophy-form">
+
+                <input type="hidden" id="trophy-id">
+
+
+                <div class="form-group">
+
+                    <label for="trophy-name">Nome da competição</label>
+
+                    <input
+                        type="text"
+                        id="trophy-name"
+                        placeholder="Ex: Libertadores"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="trophy-logo">Logo da competição</label>
+
+                    <input
+                        type="file"
+                        id="trophy-logo"
+                        accept="image/png,image/jpeg,image/webp"
+                    >
+
+                    <span class="form-hint">
+                        Envie a imagem da competição. Ela aparecerá
+                        pequena ao lado do nome.
+                    </span>
+
+                    <div class="image-preview" id="trophy-logo-preview">
+                        <i class="fa-solid fa-image"></i>
+                        <span>Pré-visualização da imagem</span>
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="trophy-quantity">Quantidade de títulos</label>
+
+                    <input
+                        type="number"
+                        id="trophy-quantity"
+                        min="0"
+                        value="0"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="trophy-seasons">Temporadas conquistadas</label>
+
+                    <textarea
+                        id="trophy-seasons"
+                        rows="3"
+                        placeholder="Ex: S1, S4, S6, S9, S13, S21"
+                    ></textarea>
+
+                </div>
+
+
+                <div class="modal-actions">
+
+                    <button type="button" class="secondary-button" data-close-modal="trophy-modal">
+                        Cancelar
+                    </button>
+
+                    <button type="submit" class="primary-button">
+                        <i class="fa-solid fa-floppy-disk"></i>
+                        Salvar Competição
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- =========================
+         MODAL: HISTÓRICO
+    ========================== -->
+
+    <div class="modal-overlay" id="season-modal">
+
+        <div class="modal-box modal-large">
+
+            <div class="modal-header">
+
+                <div>
+                    <span class="section-eyebrow">HISTÓRIA DO CLUBE</span>
+                    <h2 id="season-modal-title">Informações da Temporada</h2>
+                </div>
+
+                <button class="modal-close" data-close-modal="season-modal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+
+            <form id="season-form">
+
+                <input type="hidden" id="season-id">
+
+
+                <div class="season-form-grid">
+
+
+                    <div class="form-group">
+                        <label for="season-florida">Florida Cup</label>
+                        <input type="text" id="season-florida" placeholder="O que aconteceu?">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="season-guanabara">Guanabará</label>
+                        <input type="text" id="season-guanabara" placeholder="O que aconteceu?">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="season-carioca">Carioca</label>
+                        <input type="text" id="season-carioca" placeholder="O que aconteceu?">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="season-brasileirao">Brasileirão</label>
+                        <input type="text" id="season-brasileirao" placeholder="O que aconteceu?">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="season-copa-brasil">Copa do Brasil</label>
+                        <input type="text" id="season-copa-brasil" placeholder="O que aconteceu?">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="season-libertadores">Libertadores</label>
+                        <input type="text" id="season-libertadores" placeholder="O que aconteceu?">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="season-supercopa">Supercopa</label>
+                        <input type="text" id="season-supercopa" placeholder="O que aconteceu?">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="season-recopa">Recopa</label>
+                        <input type="text" id="season-recopa" placeholder="O que aconteceu?">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="season-intercontinental">Intercontinental</label>
+                        <input type="text" id="season-intercontinental" placeholder="O que aconteceu?">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="season-derby">Derby das Américas</label>
+                        <input type="text" id="season-derby" placeholder="O que aconteceu?">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="season-challenge">Desafio Challenge</label>
+                        <input type="text" id="season-challenge" placeholder="O que aconteceu?">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="season-supermundial">Super Mundial</label>
+                        <input type="text" id="season-supermundial" placeholder="O que aconteceu?">
+                    </div>
+
+
+                </div>
+
+
+                <div class="form-divider">
+                    DESEMPENHO INDIVIDUAL
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="season-scorer">Artilheiro da temporada</label>
+                        <input type="text" id="season-scorer">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="season-scorer-goals">Quantidade de gols</label>
+                        <input type="number" id="season-scorer-goals" min="0" value="0">
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="season-assister">Líder de assistências</label>
+                        <input type="text" id="season-assister">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="season-assister-count">Quantidade de assistências</label>
+                        <input type="number" id="season-assister-count" min="0" value="0">
+                    </div>
+
+                </div>
+
+
+                <div class="form-divider">
+                    DESEMPENHO COLETIVO
+                </div>
+
+
+                <div class="form-group">
+                    <label for="season-biggest-win">Maior goleada feita</label>
+                    <input type="text" id="season-biggest-win" placeholder="Ex: Flamengo 10 x 0 Adversário">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="season-biggest-loss">Maior goleada sofrida</label>
+                    <input type="text" id="season-biggest-loss" placeholder="Ex: Adversário 5 x 0 Flamengo">
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="season-total-goals">Gols feitos</label>
+                        <input type="number" id="season-total-goals" min="0" value="0">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="season-conceded-goals">Gols sofridos</label>
+                        <input type="number" id="season-conceded-goals" min="0" value="0">
+                    </div>
+
+                </div>
+
+
+                <div class="form-divider">
+                    OBSERVAÇÕES GERAIS
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="season-notes">O que aconteceu nesta temporada?</label>
+
+                    <textarea
+                        id="season-notes"
+                        rows="5"
+                        placeholder="Registre momentos importantes, acontecimentos, campanhas, conquistas e curiosidades..."
+                    ></textarea>
+
+                </div>
+
+
+                <div class="modal-actions">
+
+                    <button type="button" class="secondary-button" data-close-modal="season-modal">
+                        Cancelar
+                    </button>
+
+                    <button type="submit" class="primary-button">
+                        <i class="fa-solid fa-floppy-disk"></i>
+                        Salvar Histórico
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- =========================
+         MODAL: CONTRATAÇÃO
+    ========================== -->
+
+    <div class="modal-overlay" id="transfer-modal">
+
+        <div class="modal-box">
+
+            <div class="modal-header">
+
+                <div>
+                    <span class="section-eyebrow">MERCADO DA BOLA</span>
+                    <h2>Registrar Contratação</h2>
+                </div>
+
+                <button class="modal-close" data-close-modal="transfer-modal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+
+            <form id="transfer-form">
+
+                <div class="form-group">
+
+                    <label for="transfer-player">Nome do jogador</label>
+
+                    <input
+                        type="text"
+                        id="transfer-player"
+                        placeholder="Nome do contratado"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="transfer-position">Posição</label>
+
+                    <select id="transfer-position" required>
+
+                        <option value="">Selecione</option>
+
+                        <option value="Goleiro">Goleiro</option>
+
+                        <option value="Zagueiro">Zagueiro</option>
+
+                        <option value="Meia">Meia</option>
+
+                        <option value="Atacante">Atacante</option>
+
+                        <option value="Ala">Ala</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="transfer-value">Valor da contratação (€)</label>
+
+                    <input
+                        type="number"
+                        id="transfer-value"
+                        min="0"
+                        step="0.01"
+                        placeholder="Ex: 500000"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="transfer-date">Data da contratação</label>
+
+                    <input type="date" id="transfer-date" required>
+
+                </div>
+
+
+                <div class="modal-actions">
+
+                    <button type="button" class="secondary-button" data-close-modal="transfer-modal">
+                        Cancelar
+                    </button>
+
+                    <button type="submit" class="primary-button">
+                        Registrar Contratação
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- =========================
+         MODAL: CLUBE
+    ========================== -->
+
+    <div class="modal-overlay" id="club-modal">
+
+        <div class="modal-box">
+
+            <div class="modal-header">
+
+                <div>
+                    <span class="section-eyebrow">IDENTIDADE INSTITUCIONAL</span>
+                    <h2>Informações do Clube</h2>
+                </div>
+
+                <button class="modal-close" data-close-modal="club-modal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+
+            <form id="club-form">
+
+                <div class="form-group">
+
+                    <label for="club-name-input">Nome do clube</label>
+
+                    <input type="text" id="club-name-input" value="Clube de Regatas do Flamengo">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="club-president-input">Presidenta</label>
+
+                    <input type="text" id="club-president-input" value="Koee_annaa">
+
+                </div>
+
+
+                <div class="modal-actions">
+
+                    <button type="button" class="secondary-button" data-close-modal="club-modal">
+                        Cancelar
+                    </button>
+
+                    <button type="submit" class="primary-button">
+                        Salvar Informações
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- =========================
+         MODAL: CONFIRMAÇÃO
+    ========================== -->
+
+    <div class="modal-overlay" id="confirm-modal">
+
+        <div class="modal-box confirm-modal-box">
+
+            <div class="confirm-icon">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+
+            <h2 id="confirm-title">Confirmar ação</h2>
+
+            <p id="confirm-message">
+                Tem certeza de que deseja continuar?
+            </p>
+
+            <div class="modal-actions">
+
+                <button type="button" class="secondary-button" id="confirm-cancel">
+                    Cancelar
+                </button>
+
+                <button type="button" class="primary-button danger-button" id="confirm-accept">
+                    Confirmar
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- =========================
+         NOTIFICAÇÕES
+    ========================== -->
+
+    <div class="toast-container" id="toast-container"></div>
+
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <!-- SUPABASE -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="JS/supabase.js"></script>
+
+    <!-- SISTEMA PRINCIPAL -->
+    <script src="JS/script.js"></script>
+
+    <!-- MÓDULOS -->
+    <script src="JS/painel.js"></script>
+    <script src="JS/jogadores.js"></script>
+    <script src="JS/estatisticas.js"></script>
+    <script src="JS/temporadas.js"></script>
+    <script src="JS/trofeus.js"></script>
+    <script src="JS/admin.js"></script>
+
+</body>
+</html>

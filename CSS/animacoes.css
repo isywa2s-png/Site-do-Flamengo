@@ -1,0 +1,703 @@
+
+/* =========================================================
+   CLUBE DE REGATAS DO FLAMENGO
+   Arquivo: CSS/animacoes.css
+   Animações e efeitos visuais
+   ========================================================= */
+
+
+/* =========================================================
+   1. CONFIGURAÇÕES GERAIS
+   ========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease,
+        opacity 0.25s ease;
+}
+
+
+/* =========================================================
+   2. ANIMAÇÕES PRINCIPAIS
+   ========================================================= */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.94);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.04);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(1.04);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes glow {
+    0%,
+    100% {
+        box-shadow: 0 0 5px rgba(200, 16, 46, 0.15);
+    }
+
+    50% {
+        box-shadow: 0 0 18px rgba(200, 16, 46, 0.35);
+    }
+}
+
+@keyframes trophyShine {
+    0% {
+        background-position: -150% 0;
+    }
+
+    100% {
+        background-position: 150% 0;
+    }
+}
+
+
+/* =========================================================
+   3. CARREGAMENTO DA PÁGINA
+   ========================================================= */
+
+.loading-screen {
+    animation: fadeIn 0.35s ease;
+}
+
+.loading-logo {
+    animation: pulse 1.8s ease-in-out infinite;
+}
+
+.loading-spinner,
+.spinner {
+    animation: spin 0.8s linear infinite;
+}
+
+.loading-text {
+    animation: fadeIn 1s ease;
+}
+
+
+/* =========================================================
+   4. ENTRADA DAS SEÇÕES
+   ========================================================= */
+
+.page-section {
+    animation: fadeIn 0.35s ease;
+}
+
+.page-section.active {
+    animation: fadeInUp 0.4s ease both;
+}
+
+.section-header {
+    animation: fadeInDown 0.4s ease both;
+}
+
+.dashboard-hero {
+    animation: fadeInUp 0.5s ease both;
+}
+
+.dashboard-cards .dashboard-card {
+    animation: fadeInUp 0.5s ease both;
+}
+
+.dashboard-cards .dashboard-card:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.dashboard-cards .dashboard-card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.dashboard-cards .dashboard-card:nth-child(3) {
+    animation-delay: 0.15s;
+}
+
+.dashboard-cards .dashboard-card:nth-child(4) {
+    animation-delay: 0.2s;
+}
+
+
+/* =========================================================
+   5. ESCUDO DO FLAMENGO
+   ========================================================= */
+
+.club-logo,
+.team-logo,
+.flamengo-logo {
+    transition:
+        transform 0.4s ease,
+        filter 0.4s ease;
+}
+
+.club-logo:hover,
+.team-logo:hover,
+.flamengo-logo:hover {
+    transform: scale(1.06);
+    filter: drop-shadow(0 0 10px rgba(200, 16, 46, 0.35));
+}
+
+
+/* =========================================================
+   6. MENU LATERAL
+   ========================================================= */
+
+.sidebar {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.sidebar a,
+.sidebar button,
+.sidebar .nav-item {
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        padding-left 0.25s ease,
+        transform 0.25s ease;
+}
+
+.sidebar a:hover,
+.sidebar .nav-item:hover {
+    transform: translateX(4px);
+}
+
+.sidebar a.active,
+.sidebar .nav-item.active {
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.sidebar-overlay {
+    transition: opacity 0.3s ease;
+}
+
+
+/* =========================================================
+   7. BARRA SUPERIOR
+   ========================================================= */
+
+.topbar {
+    animation: fadeInDown 0.4s ease both;
+}
+
+.topbar button:hover {
+    transform: translateY(-2px);
+}
+
+.topbar button:active {
+    transform: scale(0.96);
+}
+
+
+/* =========================================================
+   8. CARTÕES DO PAINEL
+   ========================================================= */
+
+.dashboard-card,
+.dashboard-panel,
+.stat-card {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.dashboard-card:hover,
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-card .card-icon {
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.dashboard-card:hover .card-icon {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.dashboard-panel:hover {
+    border-color: rgba(200, 16, 46, 0.35);
+}
+
+
+/* =========================================================
+   9. CARTÕES DOS JOGADORES
+   ========================================================= */
+
+.player-card {
+    animation: fadeInUp 0.4s ease both;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.player-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(200, 16, 46, 0.65);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.player-card img {
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+.player-card:hover img {
+    transform: scale(1.06);
+}
+
+.player-number {
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.player-card:hover .player-number {
+    color: #c8102e;
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   10. SALA DE TROFÉUS
+   ========================================================= */
+
+.trophy-card {
+    animation: fadeInUp 0.45s ease both;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.trophy-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(200, 16, 46, 0.65);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+}
+
+.trophy-card img {
+    transition:
+        transform 0.4s ease,
+        filter 0.4s ease;
+}
+
+.trophy-card:hover img {
+    transform: scale(1.12);
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.25));
+}
+
+
+/* =========================================================
+   11. BOTÕES
+   ========================================================= */
+
+button,
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover,
+.btn:hover {
+    filter: brightness(1.08);
+}
+
+button:active,
+.btn:active {
+    transform: scale(0.97);
+}
+
+.btn-primary:hover,
+button.btn-primary:hover {
+    box-shadow: 0 6px 18px rgba(200, 16, 46, 0.25);
+}
+
+.btn-danger:hover,
+button.btn-danger:hover {
+    box-shadow: 0 6px 18px rgba(220, 38, 38, 0.2);
+}
+
+.btn-secondary:hover,
+button.btn-secondary:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   12. BOTÃO DE AVANÇAR TEMPORADA
+   ========================================================= */
+
+.btn-season,
+.advance-season-btn {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.btn-season:hover,
+.advance-season-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(200, 16, 46, 0.3);
+}
+
+.btn-season:active,
+.advance-season-btn:active {
+    transform: scale(0.96);
+}
+
+
+/* =========================================================
+   13. FORMULÁRIOS
+   ========================================================= */
+
+input,
+select,
+textarea {
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #c8102e;
+    box-shadow: 0 0 0 3px rgba(200, 16, 46, 0.12);
+}
+
+.form-group {
+    animation: fadeInUp 0.35s ease both;
+}
+
+
+/* =========================================================
+   14. MODAIS
+   ========================================================= */
+
+.modal-overlay {
+    animation: fadeIn 0.2s ease both;
+}
+
+.modal,
+.modal-content {
+    animation: bounceIn 0.3s ease both;
+}
+
+.modal-overlay.closing {
+    animation: fadeIn 0.2s ease reverse both;
+}
+
+
+/* =========================================================
+   15. NOTIFICAÇÕES
+   ========================================================= */
+
+.notification,
+.toast,
+.alert {
+    animation: slideInRight 0.35s ease both;
+}
+
+.notification.hide,
+.toast.hide,
+.alert.hide {
+    animation: slideInRight 0.3s ease reverse both;
+}
+
+
+/* =========================================================
+   16. TABELAS
+   ========================================================= */
+
+table tbody tr {
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+table tbody tr:hover {
+    background-color: rgba(200, 16, 46, 0.07);
+}
+
+table button:hover {
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   17. HISTÓRICO DE TEMPORADAS
+   ========================================================= */
+
+.season-history-card {
+    animation: fadeInUp 0.4s ease both;
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.season-history-card:hover {
+    border-color: rgba(200, 16, 46, 0.5);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+}
+
+.season-history-item {
+    transition:
+        background-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.season-history-item:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   18. ELEMENTOS ADMINISTRATIVOS
+   ========================================================= */
+
+.admin-tool-card {
+    animation: fadeInUp 0.4s ease both;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.admin-tool-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(200, 16, 46, 0.5);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================================================
+   19. ÍCONES
+   ========================================================= */
+
+i,
+.icon {
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease;
+}
+
+button:hover i,
+a:hover i {
+    transform: scale(1.1);
+}
+
+
+/* =========================================================
+   20. EFEITO DE BRILHO
+   ========================================================= */
+
+.shimmer,
+.skeleton {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.03) 25%,
+        rgba(255, 255, 255, 0.09) 50%,
+        rgba(255, 255, 255, 0.03) 75%
+    );
+
+    background-size: 200% 100%;
+    animation: shimmer 1.8s infinite linear;
+}
+
+
+/* =========================================================
+   21. EFEITO DE DESTAQUE
+   ========================================================= */
+
+.highlight,
+.highlight-card {
+    animation: glow 2.5s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   22. ACESSIBILIDADE
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
+
+
+/* =========================================================
+   23. AJUSTES PARA CELULARES
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .player-card:hover,
+    .trophy-card:hover,
+    .dashboard-card:hover,
+    .stat-card:hover {
+        transform: none;
+    }
+
+    button:hover,
+    .btn:hover {
+        filter: none;
+    }
+
+    .sidebar {
+        transition: transform 0.3s ease;
+    }
+
+    .modal,
+    .modal-content {
+        animation: fadeInUp 0.25s ease both;
+    }
+
+}
+
+
+/* =========================================================
+   FIM DAS ANIMAÇÕES
+   CLUBE DE REGATAS DO FLAMENGO
+   ========================================================= */
